@@ -8,6 +8,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -16,8 +17,7 @@ body {
 }
 
 #title {
-    position: absolute;
-    top: 35px;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -26,12 +26,12 @@ body {
     height: 437px;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .card span {
     position: absolute;
     top: 0;
-    left: calc(100% / 16 * var(--i));
     width: calc(100% / 16);
     height: 100%;
 }
@@ -47,7 +47,6 @@ body {
     opacity: 0;
 }
 
-.card img:nth-child(2),
-.card span:hover + img {
+.card img.active {
     opacity: 1;
 }
